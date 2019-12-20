@@ -76,7 +76,8 @@ public class ShopHomePage extends BasePage{
         return this;
     }
 
-    public ShopHomePage inputPhoneForRegistration(String phoneNumber){
+    public ShopHomePage inputPhoneForRegistration(String phoneNumber) throws InterruptedException {
+        Thread.sleep(3000);
         WebElement inputPhone = waitForElementLocatedBy(By.xpath("//*[@id='LRegisterForm_phone']"));
         inputPhone.sendKeys(phoneNumber);
         return  this;
